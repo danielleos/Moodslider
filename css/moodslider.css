@@ -14,6 +14,7 @@ body {
 
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    
 }
 
 .text-vertical-center {
@@ -32,7 +33,7 @@ body {
 /* Custom Button Styles */
 
 .btn-dark {
-    border-radius: 0;
+    border-radius: 100;
     color: #fff;
     background-color: rgba(0,0,0,0.4);
 }
@@ -155,47 +156,22 @@ hr.small {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(../img/bg.jpg) no-repeat center center scroll;
+    background: url(http://wallpapersonthe.net/wallpapers/b/2048x1152/2048x1152-star_outer_space_galaxy_sky_space-31149.png) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
 
-/* About */
 
-.about {
+/* App */
+
+.app {
     padding: 50px 0;
 }
 
-
-
-/* Portfolio */
-
-.portfolio {
-    padding: 50px 0;
-}
-
-.portfolio-item {
+.app-item {
     margin-bottom: 30px;
-}
-
-.img-portfolio {
-    margin: 0 auto;
-}
-
-.img-portfolio:hover {
-    opacity: 0.8;
-}
-
-/* Call to Action */
-
-.call-to-action {
-    padding: 50px 0;
-}
-
-.call-to-action .btn {
-    margin: 10px;
 }
 
 
@@ -210,4 +186,8 @@ footer {
   position: fixed;
   bottom: 5px;
   right: 5px;
+}
+
+td {
+	padding: 50px;
 }
