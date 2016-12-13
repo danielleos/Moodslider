@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Process Uploaded File</title>
+<title>Process Upload</title>
 </head>
 <body>
 <?php
