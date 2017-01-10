@@ -56,4 +56,4 @@ We would prefer that you use a language such as Java, Javascript, Ruby, PHP etc.
 are free to use any technologies to achieve this task, it’s important that you show us
 evidence of your own coding ability. You don’t need to worry about cross browser capability.
 Once you’re done, zip up your code, images and any test XML you have created. Email
-it to us at skytechacademy@gmail.com within 3 days of the date of the email.
+it to us at skytechacademy@gmail.com within 3 days of the date of the email. 
