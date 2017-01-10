@@ -1490,7 +1490,7 @@ function UtilFactory($document, $timeout, $compile, $rootScope, $$mdAnimate, $in
     },
 
     /**
-     * Functional equivalent for $element.filter(â€˜md-bottom-sheetâ€™)
+     * Functional equivalent for $element.filter(‘md-bottom-sheet’)
      * useful with interimElements where the element and its container are important...
      *
      * @param {[]} elements to scan
@@ -1682,7 +1682,7 @@ function UtilFactory($document, $timeout, $compile, $rootScope, $$mdAnimate, $in
 
     /**
      * Parses an attribute value, mostly a string.
-     * By default checks for negated values and returns `falseÂ´ if present.
+     * By default checks for negated values and returns `false´ if present.
      * Negated values are: (native falsy) and negative strings like:
      * `false` or `0`.
      * @param value Attribute value which should be parsed.
@@ -13135,7 +13135,7 @@ angular.module('material.components.navBar', ['material.core'])
  *</hljs>
  * <hljs lang="js">
  * (function() {
- *   â€˜use strictâ€™;
+ *   ‘use strict’;
  *
  *    $rootScope.$on('$routeChangeSuccess', function(event, current) {
  *      $scope.currentLink = getCurrentLinkFromRoute(current);
@@ -13656,7 +13656,7 @@ angular
  * @usage
  * <hljs lang="js">
  * (function(angular, undefined) {
- *   â€˜use strictâ€™;
+ *   ‘use strict’;
  *
  *   angular
  *       .module('demoApp', ['ngMaterial'])
@@ -13721,7 +13721,7 @@ angular
  *     interaction when there is no backdrop and events are propagated. Defaults
  *     to an arbitrary string that is not tracked.
  *   - `template` - `{string=}`: HTML template to show in the panel. This
- *     **must** be trusted HTML with respect to Angularâ€™s
+ *     **must** be trusted HTML with respect to Angular’s
  *     [$sce service](https://docs.angularjs.org/api/ng/service/$sce).
  *   - `templateUrl` - `{string=}`: The URL that will be used as the content of
  *     the panel.
@@ -16229,7 +16229,7 @@ angular.module('material.components.progressLinear', [
  * a quick sense of how long an operation will take.
  *
  * For operations where the user is asked to wait a moment while
- * something finishes up, and itâ€™s not necessary to expose what's
+ * something finishes up, and it’s not necessary to expose what's
  * happening behind the scenes and how long it will take, use an
  * indeterminate indicator.
  *
@@ -27145,8 +27145,8 @@ function MdContactChips($mdTheming, $mdUtil) {
    * myAppModule.config(function($mdDateLocaleProvider) {
    *
    *     // Example of a French localization.
-   *     $mdDateLocaleProvider.months = ['janvier', 'fÃ©vrier', 'mars', ...];
-   *     $mdDateLocaleProvider.shortMonths = ['janv', 'fÃ©vr', 'mars', ...];
+   *     $mdDateLocaleProvider.months = ['janvier', 'février', 'mars', ...];
+   *     $mdDateLocaleProvider.shortMonths = ['janv', 'févr', 'mars', ...];
    *     $mdDateLocaleProvider.days = ['dimanche', 'lundi', 'mardi', ...];
    *     $mdDateLocaleProvider.shortDays = ['Di', 'Lu', 'Ma', ...];
    *
@@ -31143,7 +31143,7 @@ function MenuItemDirective($mdUtil, $$mdSvgRegistry) {
  * For operations where the percentage of the operation completed can be determined, use a
  * determinate indicator. They give users a quick sense of how long an operation will take.
  *
- * For operations where the user is asked to wait a moment while something finishes up, and itâ€™s
+ * For operations where the user is asked to wait a moment while something finishes up, and it’s
  * not necessary to expose what's happening behind the scenes and how long it will take, use an
  * indeterminate indicator.
  *
