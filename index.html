@@ -1,262 +1,387 @@
+<!DOCTYPE html>
 <html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-<head>
+        <title>Sky Cinema - Moodslider</title>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <!-- Bootstrap Core CSS -->
+        <link href="../moodslider/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="../moodslider/css/bootstrap.css" rel="stylesheet" type="text/css">
 
-    <title>Sky Cinema - Moodslider</title>
+        <!-- Custom CSS -->
+        <link href="../moodslider/css/moodslider.css" rel="stylesheet" type="text/css">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom Fonts -->
+        <link href="../moodslider/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="../moodslider/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+        <link href="../moodslider/css/fonts.css" rel="stylesheet" type="text/css">
+        
+        <!-- AngularJS CSS -->
+        <link href="../moodslider/css/angular-material.css" rel="stylesheet" type="text/css">
+        <link href="../moodslider/css/demo.css" rel="stylesheet" type="text/css">
 
-    <!-- Link CSS -->
-    <link href="css/moodslider.css" rel="stylesheet">
+    </head>
 
-    <!-- Link Font CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
-	
-</head>
+    <body>
+    
+        <!-- ----------NAVIGATION---------- -->
+        <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle">
+            <i class="fa fa-bars"></i>
+        </a>
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle">
+                    <i class="fa fa-times"></i>
+                </a>
+                <li class="sidebar-brand">
+                    <a href="#top" onclick=$("#menu-close").click();>Moodslider</a>
+                </li>
+                <li>
+                    <a href="#top" onclick=$("#menu-close").click();>Home</a>
+                </li>
+                <li>
+                    <a href="#app" onclick=$("#menu-close").click();>Get Started</a>
+                </li>
+                <li>
+                    <a href="#upload" onclick=$("#menu-close").click();>Upload Content</a>
+                </li>
+                <li>
+                    <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
+                </li>
+            </ul>
+        </nav>
 
-<body>
-
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand">
-                <a href="#top" onclick=$("#menu-close").click();>Moodslider</a>
-            </li>
-            <li>
-                <a href="#top" onclick=$("#menu-close").click();>Home</a>
-            </li>
-            <li>
-                <a href="#app" onclick=$("#menu-close").click();>Moodslider</a>
-	    </li>
-	    <li>
-		<a href="#upload" onclick=$("menu-close").click();>Upload Content</a>
-	    </li>
-        </ul>
-    </nav>
-
-    <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-		<img src="img/skycinemalogo.png"></img>
-		<br><br>
-            <h1 style="color:white">Welcome to Moodslider</h1>
-            <br>
-            <a href="#app" class="btn btn-dark btn-lg" >Let's Get Started!</a>
-	    </div>
-	</header>
-
- 
-    <!-- App -->
-    <section id="app" class="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>How do you feel?</h2>
-                    <!-- insert actual content here
-                    like logo & upload content button
-                    four sliders
-                    5 movie placeholders... -->
-
-					<!-- Sliders -->
-					<div ng-controller="MainController" ng-cloak="" class="sliderdemoBasicUsage" ng-app="MyApp">
-  						<md-content style="margin: 16px; padding:16px">
-
-							<div layout="">
-								<div flex="10" layout="" layout-align="center center">
-									<span class="md-body-1">Sad</span>
-								</div>
-								<md-slider flex="" ng-model="mood1" min="0" max="100" aria-label="rating"></md-slider>
-								<div flex="10" layout="" layout-align="center center">
-									<span class="md-body-1">Happy</span>
-								</div>
-							</div>
-							
-							<div layout="">
-								<div flex="10" layout="" layout-align="center center">
-									<span class="md-body-1">Tired</span>
-								</div>
-								<md-slider flex="" class="md-warn" ng-model="mood2" min="0" max="100" aria-label="rating"></md-slider>
-								<div flex="10" layout="" layout-align="center center">
-									<span class="md-body-1">Energetic</span>
-								</div>
-							</div>
-							
-							<div layout="">
-								<div flex="10" layout="" layout-align="center center">
-									<span class="md-body-1">Restless</span>
-								</div>
-								<md-slider flex="" class="md-primary" ng-model="mood3" min="0" max="100" aria-label="rating"></md-slider>
-								<div flex="10" layout="" layout-align="center center">
-									<span class="md-body-1">Calm</span>
-								</div>
-							</div>
-							
-							<div layout="">
-								<div flex="10" layout="" layout-align="center center">
-									<span class="md-body-1">Scared</span>
-								</div>
-								<md-slider flex="" class="" ng-model="mood4" min="0" max="100" aria-label="rating"></md-slider>
-								<div flex="10" layout="" layout-align="center center">
-									<span class="md-body-1">Fearless</span>
-								</div>
-							</div>
-							
-						</md-content>
-					</div> <!-- end of sliders-->
-                    
-                    <a href="#app" class="btn btn-dark">Refresh Recommendations</a>
-					
-				</div> <!-- end of /.col-lg-10 -->
-				
-            </div> <!--end of /.row -->
-			<!--Put active content here: recommended movies-->
-			<table style="width:100%">
-				<tr>
-				</tr>
-				<tr>
-					<td><img src="">No content</img></td>
-					<td><img src="">No content</img></td> 
-					<td><img src="">No content</img></td>
-					<td><img src="">No content</img></td>
-					<td><img src="">No content</img></td>
-				</tr>
-				<tr>
-					<td>No content</td>
-					<td>No content</td> 
-					<td>No content</td>
-					<td>No content</td>
-					<td>No content</td>
-				</tr>
-			</table>
-		
-			<br>
-			
-        </div> <!-- end of /.container -->
-    </section> <!-- end of app -->
-
-	<!-- Uploader -->
-	<section id="upload" class="portfolio">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-10 col-lg-offset-1 text-center">
-					<!-- Placeholder 
-					<h3>Got Your Own Content?</h3>
-					<a href="#upload" class="btn btn-dark">Click to Upload</a>
-					-->
-					<form action="getfile.php" method="post"><br>
-						<h3>Got Your Own Content?</h3>
-						<input type="file" name="uploadFile">
-						<input type="submit" value="Click to Upload" class="btn btn-dark">
-					</form>
-				</div>
-			</div>
-		</div>
-	</section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Sky plc</strong>
-                    </h4>
-                    <p>Grant Way
-                      <br>Isleworth
-                      <br>TW7 5QD</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i>08442 411 411</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:startingout@sky.uk">startingout@sky.uk</a>
-                        </li>
-                    </ul>
-                    <br>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                        </li>
-                    </ul>
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; Moodslider 2016</p>
-                </div>
+    
+    
+    
+        <!-- ----------HEADER---------- -->
+        <header id="top" class="header">
+            <div class="text-vertical-center">
+                <img src="img/sky-cinema-logo.png"></img> <br><br>
+                <h1 style="color:white">Welcome to Moodslider</h1> <br>
+                <a href="#app" class="btn btn-dark btn-lg">Let's Get Started!</a>
             </div>
-        </div>
-        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-    </footer>
+        </header>
+        <!-- END OF HEADER -->
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    
+    
+    
+        <!-- ----------APPLICATION---------- -->
+        <section id="app" class="application">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 text-center">
+                        <h2>How do you feel?</h2>
+                    
+                        <!-- SLIDERS -->
+                        <div ng-controller="MainController" ng-cloak="" class="sliderdemoBasicUsage" ng-app="MyApp">
+                            <md-content style="margin: 16px; padding: 16px 16px 16px 16px;">
+                            
+                                <div layout=""> <!-- [0]=>SAD/[100]=>HAPPY SLIDER -->
+                                    <div flex="10" layout="" layout-align="center center">
+                                        <span class="md-body-1">Sad</span>
+                                        <!-- Label the left side (nearest the [0] value) as negative emotion -->
+                                    </div>
+                                    <md-slider flex="" ng-model="mood1" min="0" max="100" aria-label="rating"></md-slider>
+                                    <!-- define continuity, colour and range of slider -->
+                                    <div flex="10" layout="" layout-align="center center">
+                                        <span class="md-body-1">Happy</span>
+                                        <!-- Label the right side (nearest the [100] value) as positive emotion -->
+                                    </div>
+                                </div>
+                                
+                                <div layout=""> <!-- [0]=>TIRED/[100]=>ENERGETIC SLIDER -->
+                                    <div flex="10" layout="" layout-align="center center">
+                                        <span class="md-body-1">Tired</span>
+                                    </div>
+                                    <md-slider flex="" class="md-warn" ng-model="mood2" min="0" max="100" aria-label="rating"></md-slider>
+                                    <div flex="10" layout="" layout-align="center center">
+                                        <span class="md-body-1">Energetic</span>
+                                    </div>
+                                </div>
+                                
+                                <div layout=""> <!-- [0]=>RESTLESS/[100]=>CALM SLIDER -->
+                                    <div flex="10" layout="" layout-align="center center">
+                                        <span class="md-body-1">Restless</span>
+                                    </div>
+                                    <md-slider flex="" class="md-primary" ng-model="mood3" min="0" max="100" aria-label="rating"></md-slider>
+                                    <div flex="10" layout="" layout-align="center center">
+                                        <span class="md-body-1">Calm</span>
+                                    </div>
+                                </div>
+                                
+                                <div layout=""> <!-- [0]=>SCARED/[100]=>FEARLESS SLIDER -->
+                                    <div flex="10" layout="" layout-align="center center">
+                                        <span class="md-body-1">Scared</span>
+                                    </div>
+                                    <md-slider flex="" class="" ng-model="mood4" min="0" max="100" aria-label="rating"></md-slider>
+                                    <div flex="10" layout="" layout-align="center center">
+                                        <span class="md-body-1">Fearless</span>
+                                    </div>
+                                </div>
+                            </md-content>
+                        </div>
+                    <!-- END OF SLIDERS -->
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+                    </div>
+                    <!-- /.col-lg-10 -->
+                </div>
+                <!-- /.row -->
+                
+                <!-- ACTIVE CONTENT: RECOMMENDED MOVIES -->
+                <div class="data" id="filmdata">
+                    <table style="width:100%">
+                        <tr>
+                            <td><a href="#"><img class="img-resize" src="img/wonderland.jpg"></img></a></td>
+                            <td><a href="#"><img class="img-resize" src="img/avatar.jpg"></img></a></td>
+                            <td><a href="#"><img class="img-resize" src="img/brucealmighty.jpg"></img></a></td>
+                            <td><a href="#"><img class="img-resize" src="img/rogueone.jpg"></img></a></td>
+                            <td><a href="#"><img class="img-resize" src="img/passengers.jpg"></img></a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Alice in Wonderland</a></td>
+                            <td><a href="#">Avatar</a></td>
+                            <td><a href="#">Bruce Almighty</a></td>
+                            <td><a href="#">Star Wars: Rogue One</a></td>
+                            <td><a href="#">Passengers</a></td>
+				        </tr>
+                    </table>
+                </div> <br>
+                <!-- END OF ACTIVE CONTENT -->
 
-    <!-- Custom Theme JavaScript -->
-    <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- END OF APPLICATION -->
+
+    
+    
+    
+
+        <!-- ----------UPLOADER---------- -->
+        <section id="upload" class="uploader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1 text-center">
+                        
+                        <h3>Got Your Own Content?</h3> <!--
+                        <form action="upload.php">
+                            <input type="file" name="fileupload" value="fileupload" id="fileupload">
+                            <label for="fileupload">Select a file to upload</label>
+                            <input type="submit" value="Upload" class="btn btn-dark btn">
+                        </form> -->
+                        
+                        <!-- Upload local file -->
+                        <script>
+                            $.ajax({
+                                type: "GET",
+                                url: "../moodslider/filmdata.xml",
+                                dataType: "xml",
+                                success: function(xml) {
+                                    //What we should do with the xml
+                                    
+                                }
+                            });
+                        </script>
+
+                    
+                    
+                        <!-- TOGGLE HELP BUTTON -->
+                        <button onclick="helpFunction()" class="btn btn-dark btn">Need help?</button>
+                        <div id="help" style="display:none;">
+                            Please ensure your content is uploaded as an XML file with the following format: <br><br>
+                            <div id="xml-help" class="dlg-box">
+                                <code>&lt;?xml version="1.0" encoding="UTF-8"?> <br>
+                                    &lt;programmeList&gt; <br>
+                                    &lt;programme id="UNIQUE NUMBER"> <br>
+                                    &lt;name>INSERT TITLE OF MOVIE&lt;/name> <br>
+                                    &lt;image>INSERT MOVIE POSTER IMAGE&lt;/image> <br>
+                                    &lt;mood>INSERT MOOD THAT BEST CHARACTERIZES MOVIE OUT OF:<br>
+                                    HAPPY-SAD-ENERGETIC-TIRED-CALM-RESTLESS-FEARLESS-SCARED&lt;/mood> <br>
+                                    &lt;/programme> <br>
+                                    &lt;/programmeList>
+                                </code>
+                            </div> <br>
+                            <p>Still having issues? Please contact a member of the team <a href="mailto:startingout@sky.uk">here</a></p>
+                        </div>
+                        <!-- END OF TOGGLE HELP BUTTON -->
+                        
+                    </div>
+                    <!-- /.col-lg-10 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- END OF UPLOADER -->
+
+
+
+
+        <!-- ----------FOOTER---------- -->
+        <footer id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1 text-center">
+                        <h4><strong>Sky plc</strong></h4>
+                        <p>Grant Way <br>
+                            Isleworth <br>
+                            TW7 5QD</p>
+                        <ul class="list-unstyled">
+                            <li>
+                                <i class="fa fa-phone fa-fw"></i> 08442 411 411
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope-o fa-fw"></i>
+                                <a href="mailto:startingout@sky.uk">startingout@sky.uk</a>
+                            </li>
+                        </ul> <br>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="https://www.facebook.com/sky/">
+                                    <i class="fa fa-facebook fa-fw fa-3x"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/skyuk">
+                                    <i class="fa fa-twitter fa-fw fa-3x"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <hr class="small">
+                        <p class="text-muted">Copyright &copy; Moodslider 2017</p>
+                    </div>
+                    <!-- /.col-lg-10 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+            
+            
+            <!-- TO TOP BUTTON -->
+            <a id="to-top" href="#top" class="btn btn-dark btn-lg">
+                <i class="fa fa-chevron-up fa-fw fa-1x"></i>
+            </a>
+            <!-- END OF TO TOP BUTTON -->
+
+        </footer>
+        <!-- END OF FOOTER -->
+
+
+
+
+        <!-- Import jQuery -->
+        <script src="../moodslider/js/jquery.js"></script>
+        <script src="../moodslider/js/jquery.min.js"></script>
+
+
+        <!-- Import Bootstrap Core JavaScript -->
+        <script src="../moodslider/js/bootstrap.js"></script>
+        <script src="../moodslider/js/bootstrap.min.js"></script>
+
+
+        <!-- Import AngularJS & Slider JavaScript -->
+        <script src="../moodslider/js/angular.js"></script>
+        <script src="../moodslider/js/angular-animate.min.js"></script>
+        <script src="../moodslider/js/angular-route.min.js"></script>
+        <script src="../moodslider/js/angular-aria.min.js"></script>
+        <script src="../moodslider/js/angular-messages.min.js"></script>
+        <script src="../moodslider/js/angular-material.js"></script>
+        <script src="../moodslider/js/svg-assets-cache.js"></script>
+
+
+        <!-- Custom Theme JavaScript -->
+        <script>
+        
+            // Closes the sidebar menu
+            $("#menu-close").click(function(e) {
+                e.preventDefault();
+                $("#sidebar-wrapper").toggleClass("active");
+            });
+        
+            // Opens the sidebar menu
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#sidebar-wrapper").toggleClass("active");
+            });
+        
+            // Scrolls to the selected menu item on the page
+            $(function() {
+                $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        if (target.length) {
+                            $('html,body').animate({
+                                scrollTop: target.offset().top
+                            }, 1000);
+                            return false;
+                        }
+                    }
+                });
+            });
+            
+            //Sliders MainControllerr
+            angular.module('MyApp',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
+            
+            .config(function($mdIconProvider) {
+                $mdIconProvider
+                .iconSet('device', '../moodslider/img/device-icons.svg', 24);
+            })
+            
+            .controller('MainController', function($scope) {
+                $scope.mood1 = 50;
+                $scope.mood2 = 50;
+                $scope.mood3 = 50;
+                $scope.mood4 = 50;
+            });
+            
+            //toggle on-off help button function
+            function helpFunction() {
+                var fileHelp = document.getElementById('help');
+                if (fileHelp.style.display === 'none') {
+                    fileHelp.style.display = 'block';
+                } else {
+                    fileHelp.style.display = 'none';
                 }
             }
-        });
-    });
-
-    //#to-top button appears after scrolling
-    var fixed = false;
-    $(document).scroll(function() {
-        if ($(this).scrollTop() > 250) {
-            if (!fixed) {
-                fixed = true;
-                // $('#to-top').css({position:'fixed', display:'block'});
-                $('#to-top').show("slow", function() {
-                    $('#to-top').css({
-                        position: 'fixed',
-                        display: 'block'
-                    });
-                });
-            }
-        } else {
-            if (fixed) {
-                fixed = false;
-                $('#to-top').hide("slow", function() {
-                    $('#to-top').css({
-                        display: 'none'
-                    });
-                });
-            }
-        }
-    });
-    </script>
-
-</body>
+            
+            //#to-top button appears after scrolling
+            var fixed = false;
+            $(document).scroll(function() {
+                if ($(this).scrollTop() > 250) {
+                    if (!fixed) {
+                        fixed = true;
+                        // $('#to-top').css({position:'fixed', display:'block'});
+                        $('#to-top').show("slow", function() {
+                            $('#to-top').css({
+                                position: 'fixed',
+                                display: 'block'
+                            });
+                        });
+                    }
+                } else {
+                    if (fixed) {
+                        fixed = false;
+                        $('#to-top').hide("slow", function() {
+                            $('#to-top').css({
+                                display: 'none'
+                            });
+                        });
+                    }
+                }
+            });
+        
+        </script>
+        <!-- End of Custom JS -->
+    
+    </body>
 
 </html>
