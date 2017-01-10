@@ -14,8 +14,20 @@ body {
 
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+data {
     
 }
+
+.img-resize {
+        height: 275px;
+    }
 
 .text-vertical-center {
     display: table-cell;
@@ -33,7 +45,7 @@ body {
 /* Custom Button Styles */
 
 .btn-dark {
-    border-radius: 100;
+    border-radius: 0;
     color: #fff;
     background-color: rgba(0,0,0,0.4);
 }
@@ -156,15 +168,14 @@ hr.small {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(img/bg.png) no-repeat center center scroll;
+    background: url(../img/red-bg.png) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
 
-
-/* App */
+/* APPLICATION */
 
 .app {
     padding: 50px 0;
@@ -175,9 +186,39 @@ hr.small {
 }
 
 
-/* Footer */
+/* UPLOADER - Attempt to centre file input button */
 
-footer {
+input[type=file] {
+    margin: 0 auto;
+}
+
+.application {
+    background-color: #ffffff;
+}
+
+.uploader {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.dlg-box {
+    background-color: #000000;
+    color: #ffffff;
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    text-align: left;
+    padding: 0px 200px 0px 200px;
+}
+
+/* FOOTER */
+
+.footer {
     padding: 100px 0;
 }
 
@@ -186,8 +227,4 @@ footer {
   position: fixed;
   bottom: 5px;
   right: 5px;
-}
-
-td {
-	padding: 50px;
 }
